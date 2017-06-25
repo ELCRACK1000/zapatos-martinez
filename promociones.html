@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ZAPATERIA MARTINEZ</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-image: url(19.jpg);
+}
+
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la eliminación del margen superior resuelve un problema que origina que los márgenes escapen de la etiqueta div contenedora. El margen inferior restante lo mantendrá separado de los elementos de que le sigan. */
+	padding-right: 15px;
+	padding-left: 15px;
+	font-weight: bold;
+	color: #909;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	font-size: 23px;
+}
+a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
+	border: none;
+}
+
+/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un ratón. */
+	text-decoration: none;
+}
+
+/* ~~ este contenedor de anchura fija rodea a las demás divs ~~ */
+.container {
+	width: 960px;
+	background-color: #FFF;
+	margin: 0 auto; /* el valor automático de los lados, unido a la anchura, centra el diseño */
+}
+
+/* ~~ no se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. Contiene un marcador de posición de imagen que debe sustituirse por su propio logotipo vinculado ~~ */
+.header {
+	background-color: #ADB96E;
+	background-image: url(22.jpg);
+}
+
+/* ~~ Estas son las columnas para el diseño. ~~ 
+
+1) El relleno sólo se sitúa en la parte superior y/o inferior de las divs. Los elementos situados dentro de estas divs tienen relleno a los lados. Esto le ahorra las "matemáticas de modelo de cuadro". Recuerde que si añade relleno o borde lateral a la div propiamente dicha, éste se añadirá a la anchura que defina para crear la anchura *total*. También puede optar por eliminar el relleno del elemento en la div y colocar una segunda div dentro de ésta sin anchura y el relleno necesario para el diseño deseado. También puede optar por eliminar el relleno del elemento en la div y colocar una segunda div dentro de ésta sin anchura y el relleno necesario para el diseño deseado.
+
+2) No se asigna margen a las columnas, ya que todas ellas son flotantes. Si es preciso añadir un margen, evite colocarlo en el lado hacia el que se produce la flotación (por ejemplo: un margen derecho en una div configurada para flotar hacia la derecha). En muchas ocasiones, puede usarse relleno como alternativa. En el caso de divs para las que deba incumplirse esta regla, deberá añadir una declaración "display:inline" a la regla de la div para evitar un error que provoca que algunas versiones de Internet Explorer dupliquen el margen.
+
+3) Dado que las clases se pueden usar varias veces en un documento (y que también se pueden aplicar varias clases a un elemento), se ha asignado a las columnas nombres de clases en lugar de ID. Por ejemplo, dos divs de barra lateral podrían apilarse si fuera necesario. Si lo prefiere, éstas pueden cambiarse a ID fácilmente, siempre y cuando las utilice una sola vez por documento.
+
+4) Si prefiere que la navegación esté a la derecha en lugar de a la izquierda, simplemente haga que estas columnas floten en dirección opuesta (todas a la derecha en lugar de todas a la izquierda) y éstas se representarán en orden inverso. No es necesario mover las divs por el código fuente HTML.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 180px;
+	background-color: #EADCAE;
+	padding-bottom: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #909;
+}
+.content {
+	padding: 10px 0;
+	width: 780px;
+	float: left;
+	font-size: 36px;
+}
+
+/* ~~ Este selector agrupado da espacio a las listas del área de .content ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* este relleno reproduce en espejo el relleno derecho de la regla de encabezados y de párrafo incluida más arriba. El relleno se ha colocado en la parte inferior para que el espacio existente entre otros elementos de la lista y a la izquierda cree la sangría. Estos pueden ajustarse como se desee. */
+	font-size: 24px;
+	color: #F03;
+	font-weight: bold;
+	text-align: left;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* ~~ Los estilos de lista de navegación (pueden eliminarse si opta por usar un menú desplegable predefinido como el de Spry) ~~ */
+ul.nav {
+	list-style: none; /* esto elimina el marcador de lista */
+	border-top: 1px solid #666; /* esto crea el borde superior de los vínculos (los demás se sitúan usando un borde inferior en el LI) */
+	margin-bottom: 15px; /* esto crea el espacio entre la navegación en el contenido situado debajo */
+	font-size: xx-small;
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* esto crea la separación de los botones */
+	color: #000;
+}
+ul.nav a, ul.nav a:visited { /* al agrupar estos selectores, se asegurará de que los vínculos mantengan el aspecto de botón incluso después de haber sido visitados */
+	padding: 5px 5px 5px 15px;
+	display: block; /* esto asigna propiedades de bloque al vínculo, lo que provoca que llene todo el LI que lo contiene. Esto provoca que toda el área reaccione a un clic de ratón. */
+	width: 160px;  /*esta anchura hace que se pueda hacer clic en todo el botón para IE6. Puede eliminarse si no es necesario proporcionar compatibilidad con IE6. Calcule la anchura adecuada restando el relleno de este vínculo de la anchura del contenedor de barra lateral. */
+	text-decoration: none;
+	background-color: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* esto cambia el color de fondo y del texto tanto para usuarios que naveguen con ratón como para los que lo hagan con teclado */
+	background-color: #ADB96E;
+	color: #FFF;
+	font-size: xx-small;
+}
+
+/* ~~ El pie de página ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #CCC49F;
+	position: relative;/* esto da a IE6 hasLayout para borrar correctamente */
+	clear: both; /* esta propiedad de borrado fuerza a .container a conocer dónde terminan las columnas y a contenerlas */
+	background-image: url(27.jpg);
+}
+
+/* ~~ clases float/clear varias ~~ */
+.fltrt {  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: left;
+	margin-right: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #000;
+	font-size: 36%;
+}
+.clearfloat { /* esta clase puede situarse en una <br /> o div vacía como elemento final tras la última div flotante (dentro de #container) si #footer se elimina o se saca fuera de #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+#apDiv1 {
+	position: absolute;
+	width: 706px;
+	height: 125px;
+	z-index: 1;
+	left: 329px;
+	top: 52px;
+}
+.bienbenidos {
+	color: #F00;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: bold;
+	font-size: 200%;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 36px;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: medium;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 50px;
+}
+.header #apDiv1 blockquote blockquote {
+	color: #CCC;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 14px;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 14cm;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 14;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 24px;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 24;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 18px;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 18mm;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 18;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 16px;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 16cm;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 12px;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 12cm;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 12;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 16px;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 16px;
+	color: #000;
+}
+.container .content p .bienbenidos {
+	font-size: 24px;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 16px;
+}
+.container .header #apDiv1 blockquote blockquote {
+	font-size: 16;
+	color: #000;
+}
+.container .content p .bienbenidos {
+	font-size: 36px;
+}
+.container .content p .bienbenidos {
+	font-size: 36;
+}
+#apDiv2 {
+	position: absolute;
+	width: 801px;
+	height: 173px;
+	z-index: 1;
+	left: 251px;
+	top: 8px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 24pt;
+	text-align: center;
+	font-weight: bold;
+}
+.container .sidebar1 .nav ul ul li a {
+	font-size: 24%;
+}
+.container .sidebar1 .nav ul ul li a {
+	font-size: 36%;
+}
+.container .sidebar1 .nav ul ul li a {
+	font-size: 36;
+}
+.container .sidebar1 .nav ul ul li a {
+	font-size: 36%;
+}
+.container .sidebar1 .nav ul ul li a {
+	font-size: 36;
+}
+.container .sidebar1 .nav ul ul li a {
+	font-size: 36%;
+}
+.container .sidebar1 .nav ul ul li a {
+	font-size: small;
+}
+.container .sidebar1 .nav li a {
+	font-size: x-small;
+}
+.container .sidebar1 .nav li a {
+	font-size: small;
+}
+.container .content p {
+	color: #F0F;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.container .content ul li {
+	font-family: "MS Serif", "New York", serif;
+	color: #F06;
+}
+#apDiv3 {
+	position: absolute;
+	width: 345px;
+	height: 115px;
+	z-index: 2;
+	left: 337px;
+	top: 239px;
+	font-family: "MS Serif", "New York", serif;
+	color: #606;
+	font-size: larger;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><a href="#"><img src="logo1.jpg" alt="Insertar logotipo aquí" name="Insert_logo" width="145" height="124" id="Insert_logo" style="background-color: #C6D580; display:block;" /></a>
+    <div id="apDiv2"><a href="#"><img src="d.jpg" alt="" width="815" height="177" /></a></div>
+    <blockquote>
+      <blockquote>
+         <font size="15">
+        <h1>&nbsp;</h1>          
+        <font size="15">
+      </blockquote>
+    </blockquote>
+    <!-- end .header --></div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <ul>
+        <ul>
+          <li><a href="Untitled-1.html">INICIO</a></li>
+        </ul>
+      </ul>
+      <li></li>
+      <li><a href="ZAPATOS DE NIÑA.html">ZAPATOS DE NIÑA</a></li>
+      <li><a href="ZAPATOS DE NIÑO.html">ZAPATOS DE NIÑO</a></li>
+      <li><a href="video.html">ZAPATOS HECHOS DE ESTAMBRE(VIDEO)</a></li>
+       <li><a href="botas para bebe.html">BOTAS PARA BEBE</a></li>
+      <li><a href="sandalias para bebe.html">SANDALIAS PARA BEBE</a></li>
+      <li><a href="tops de lo mas vendido.html">TOP DE LO MAS VENDIDO</a></li>
+      <li><a href="promociones.html">PROMOCIONES</a></li>
+        <li></li>
+         <li></li>
+         <li></li>
+    </ul>
+<p>Pagina de la<br />
+    Zapateria Martinez.</p>
+    <p>pedidos al numero:</p>
+    <p>4402345910</p>
+    <p><img src="thDFGWEC5I.jpg" alt="" width="64" height="52" />whatsApp</p>
+    <p>4423843012</p>
+    <p>MORELIA MICHOACAN<br />
+  </p>
+  <!-- end .sidebar1 --></div>
+  <div class="content">
+    <p>&nbsp;</p>
+    <div id="apDiv3">PROMOCIONES</div>
+    <p>&nbsp;</p>
+    <ul>
+      <li>EN LA COMPRA DE 30 PARES DE ZAPATOS TE DESCONTAMOS EL 20%<br />
+      <img src="27.jpg" width="331" height="225" /><img src="thD14A785G.jpg" width="263" height="216" /></li>
+      <li>si compras 50 pares de zapatos echos de estambre de niño y niña te  descontamos el 30%. </li>
+    </ul>
+    <p><img src="th5LWK61DH.jpg" width="185" height="197" /><img src="th9XA5ZHXC.jpg" width="235" height="190" /><img src="thB96M9WCV.jpg" width="238" height="196" /></p>
+    <p>EN LA COMPRA DE 100 PARES DE ZAPATOS DE DIFERENTE MODELO (NIÑO Y NIÑA)LLEVATE DE REGALO 20 PARES DE ZAPATOS.</p>
+    <p><img src="thE6I9380P.jpg" width="280" height="201" /><img src="thVHX6CABH.jpg" width="232" height="207" /><img src="thZB6GCBE1.jpg" width="209" height="201" /></p>
+    <p>CORREO ELECTRONICO</p>
+<p>drago_m123@gmail.com</p>
+    <p><img src="lliella_BabyGirl_baby2.png" width="765" height="355" /></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><br />
+</p>
+  <!-- end .content --></div>
+<div class="footer">
+    <p>&nbsp;</p>
+    <p><!-- end .footer --></p>
+  </div>
+<!-- end .container --></div>
+</body>
+</html>
